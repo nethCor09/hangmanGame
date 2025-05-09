@@ -15,3 +15,13 @@ public class Ahorcado {
         inicializarPalabraOculta();
         inicializarDibujoAhorcado();
     }
+private boolean validarPalabra(String palabraOculta, String palabraSecreta){
+    boolean esValida;
+    
+    if(palabra Oculta.equals(palabraSecreta)){
+        esValida = true;
+    }else{
+        esValida = false;
+    }
+    return esValida;
+    }
