@@ -15,6 +15,23 @@ public class Ahorcado {
         inicializarPalabraOculta();
         inicializarDibujoAhorcado();
     }
+    private void inicializarPalabraOculta() {
+        for(int i = 0; i < palabraOculta.length; i++) {
+            palabraOculta[i] = '_';
+        }
+    }
+    
+    private void inicializarDibujoAhorcado() {
+        dibujoAhorcado = new String[] {
+            "  +---+\n  |   |\n      |\n      |\n      |\n      |\n=========",
+            "  +---+\n  |   |\n  O   |\n      |\n      |\n      |\n=========",
+            "  +---+\n  |   |\n  O   |\n  |   |\n      |\n      |\n=========",
+            "  +---+\n  |   |\n  O   |\n /|   |\n      |\n      |\n=========",
+            "  +---+\n  |   |\n  O   |\n /|\\  |\n      |\n      |\n=========",
+            "  +---+\n  |   |\n  O   |\n /|\\  |\n /    |\n      |\n=========",
+            "  +---+\n  |   |\n  O   |\n /|\\  |\n / \\  |\n      |\n========="
+        };
+    }
     
   public void jugar() {
         Scanner sc = new Scanner(System.in);
