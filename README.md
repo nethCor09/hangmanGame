@@ -1,2 +1,17 @@
-# hangmanGame
-Classic Hangman game in Java. The user must guess a secret word letter by letter before running out of guesses. Includes an ASCII drawing of a hangman and basic validation logic.
+import java.util.Scanner;
+
+public class Ahorcado {
+    private String palabraSecreta;
+    private char[] palabraOculta;
+    private boolean[] letrasAdivinadas;
+    private String[] dibujoAhorcado;
+    private int intentosRestantes;
+
+    public Ahorcado(String palabraSecreta) {
+        this.palabraSecreta = palabraSecreta.toUpperCase();
+        this.palabraOculta = new char[palabraSecreta.length()];
+        this.letrasAdivinadas = new boolean[palabraSecreta.length()];
+        this.intentosRestantes = 6;
+        inicializarPalabraOculta();
+        inicializarDibujoAhorcado();
+    }
