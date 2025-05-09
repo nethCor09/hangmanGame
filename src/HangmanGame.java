@@ -15,4 +15,32 @@ public class Ahorcado {
         inicializarPalabraOculta();
         inicializarDibujoAhorcado();
     }
-}
+    
+  public void jugar() {
+        Scanner sc = new Scanner(System.in);
+
+        while (intentosRestantes > 0) {
+            mostrarEstadoJuego();
+            System.out.print("\nIngresa una letra: ");
+            char letra = sc.next().toUpperCase().charAt(0);
+
+            if (!validarCaracter(letra)) {
+                intentosRestantes--;
+                System.out.println("Letra incorrecta.");
+            }
+
+            if (validarPalabra(String.valueOf(palabraOculta), palabraSecreta)) {
+                System.out.println("\n¡Felicidades! Has adivinado la palabra: " + palabraSecreta);
+                return;
+            }
+        }
+
+        System.out.println(dibujoAhorcado[6]);
+        System.out.println("¡Perdiste! La palabra era: " + palabraSecreta);
+        sc.close();
+    }
+
+    private boolean validarPalabra(String palabraOculta, String palabraSecreta) {
+        return palabraOculta.equals(palabraSecreta);
+    }
+}   
