@@ -43,4 +43,9 @@ public class Ahorcado {
     private boolean validarPalabra(String palabraOculta, String palabraSecreta) {
         return palabraOculta.equals(palabraSecreta);
     }
-}   
+ private void mostrarEstadoJuego() {
+        System.out.println("\nPalabra actual: " + String.valueOf(palabraOculta));
+        System.out.println("Intentos restantes: " + intentosRestantes);
+        System.out.println(dibujoAhorcado[6 - intentosRestantes]);
+    }
+//hasta aqui mi parte :)    
