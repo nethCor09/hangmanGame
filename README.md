@@ -10,3 +10,5 @@ El programa demuestra conceptos de programación como arreglos, ciclos, condicio
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0a20471f-a05c-4741-96c4-e388a83a4f06" alt="Ahorcado" width="200"/>
 </p>
+
+
