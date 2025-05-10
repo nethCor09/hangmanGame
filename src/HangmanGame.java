@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-public class Ahorcado {
+public class HangmanGame {
     private String palabraSecreta;
     private char[] palabraOculta;
     private boolean[] letrasAdivinadas;
     private String[] dibujoAhorcado;
     private int intentosRestantes;
 
-    public Ahorcado(String palabraSecreta) {
+    public HangmanGame(String palabraSecreta) {
         this.palabraSecreta = palabraSecreta.toUpperCase();
         this.palabraOculta = new char[palabraSecreta.length()];
         this.letrasAdivinadas = new boolean[palabraSecreta.length()];
@@ -65,4 +65,14 @@ public class Ahorcado {
         System.out.println("Intentos restantes: " + intentosRestantes);
         System.out.println(dibujoAhorcado[6 - intentosRestantes]);
     }
-//hasta aqui mi parte :)    
+    private boolean validarPalabra(String palabraOculta, String palabraSecreta) {
+        boolean esValida;
+
+        if(palabraOculta.equals(palabraSecreta)) {
+            esValida = true;
+        }else{
+            esValida = false;
+        }
+        return esValida;
+    }
+      
