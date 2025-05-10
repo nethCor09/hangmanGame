@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ahorcado {
+public class HangmanGame {
     private String palabraSecreta;
     private char[] palabraOculta;
     private boolean[] letrasAdivinadas;
