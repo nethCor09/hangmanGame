@@ -65,14 +65,4 @@ public class HangmanGame {
         System.out.println("Intentos restantes: " + intentosRestantes);
         System.out.println(dibujoAhorcado[6 - intentosRestantes]);
     }
-    private boolean validarPalabra(String palabraOculta, String palabraSecreta) {
-        boolean esValida;
-
-        if(palabraOculta.equals(palabraSecreta)) {
-            esValida = true;
-        }else{
-            esValida = false;
-        }
-        return esValida;
-    }
-      
+//hasta aqui mi parte :)    
